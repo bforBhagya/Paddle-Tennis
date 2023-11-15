@@ -1,5 +1,5 @@
 
-# <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Tennis.png" alt="Tennis" width="25" height="25" /> Paddle Tennis Game
+# <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Tennis.png" alt="Tennis" width="50" height="50" /> Paddle Tennis Game
 
 A simple Paddle Tennis game implemented in Python using the Pygame library.
 
