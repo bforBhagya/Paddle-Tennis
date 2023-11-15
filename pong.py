@@ -46,11 +46,12 @@ class paddle():
             self.rect.move_ip(0,-1 * self.speed)
         if key[pygame.K_DOWN] and self.rect.bottom< screen_height:
             self.rect.move_ip(0,self.speed)
+
     def ai(self):
         if self.rect.centery < pong.rect.top and self.rect.bottom < screen_height:
             self.rect.move_ip(0,self.speed)
         if self.rect.centery > pong.rect.bottom and self.rect.top > margin:
-            self.rect.move_ip(0,-1*self.speed)
+            self.rect.move_ip(0,-1*self.speed)      
 
     def draw(self):
         pygame.draw.rect(screen,white,self.rect)     
@@ -67,6 +68,9 @@ class ball():
                self.speed_y *= -1
             if self.rect.bottom > screen_height:
                self.speed_y *= -1   
+
+            if self.rect.colliderect(player_paddle) or self.rect.colliderect(cpu_paddle):
+                self.speed_x *= -1
 
 
             if self.rect.left < 0:
@@ -87,8 +91,8 @@ class ball():
                 self.y = y
                 self.ball_rad = 8
                 self.rect = Rect(self.x,self.y,self.ball_rad*2,self.ball_rad*2)
-                self.speed_x = -4
-                self.speed_y = 4
+                self.speed_x = -1
+                self.speed_y = 1
                 self.winner = 0
             
 
